@@ -8,4 +8,5 @@ print("The sum of the series is:",sum_series)
 
 
 OUTPUT:
+Enter the value of N: 5
 The sum of the series is: 2.708333333333333
