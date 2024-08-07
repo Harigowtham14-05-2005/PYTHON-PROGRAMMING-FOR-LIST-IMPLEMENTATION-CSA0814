@@ -4,6 +4,7 @@ for char in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
 for char in 'abcdefghijklmnopqrstuvwxyz':
     print(char, ord(char))
 
+
 OUTPUT:
 A 65
 B 66
