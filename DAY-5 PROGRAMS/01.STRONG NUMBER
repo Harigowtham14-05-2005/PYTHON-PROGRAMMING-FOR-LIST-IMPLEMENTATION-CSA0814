@@ -9,9 +9,9 @@ for digit in digits:
         factorial *= i
     sum_of_factorials += factorial
 if sum_of_factorials == number:
-    print(f"{number} is a strong number.")
+    print(number,"is a strong number.")
 else:
-    print(f"{number} is not a strong number.")
+    print(number,"is not a strong number.")
 
 
 OUTPUT:
