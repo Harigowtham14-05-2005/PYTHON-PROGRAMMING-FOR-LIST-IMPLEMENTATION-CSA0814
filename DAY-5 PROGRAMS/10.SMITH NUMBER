@@ -25,9 +25,9 @@ for factor in factors:
         sum_digits_factors += temp % 10
         temp //= 10
 if len(factors) > 1 and sum_digits_number == sum_digits_factors:
-    print(f"{number} is a Smith number")
+    print(number,"is a Smith number")
 else:
-    print(f"{number} is not a Smith number")
+    print(number,"is not a Smith number")
 
 
 OUTPUT:
