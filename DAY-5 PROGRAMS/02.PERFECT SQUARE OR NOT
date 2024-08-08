@@ -3,9 +3,9 @@ import math
 number = 16  
 sqrt_number = math.sqrt(number)
 if sqrt_number.is_integer():
-    print(f"{number} is a perfect square.")
+    print(number,"is a perfect square.")
 else:
-    print(f"{number} is not a perfect square.")
+    print(number,"is not a perfect square.")
 
 
 OUTPUT:
