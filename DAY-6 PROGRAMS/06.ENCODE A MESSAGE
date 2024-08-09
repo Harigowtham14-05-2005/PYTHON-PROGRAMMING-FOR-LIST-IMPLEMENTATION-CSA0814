@@ -10,8 +10,8 @@ for char in message:
         encoded_message += encoded_char
     else:
         encoded_message += char
-print(f"Original message: {message}")
-print(f"Encoded message: {encoded_message}")
+print("Original message",message)
+print("Encoded message:",encoded_message)
 
 
 OUTPUT:
