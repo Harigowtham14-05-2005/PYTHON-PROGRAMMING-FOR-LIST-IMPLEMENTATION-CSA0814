@@ -10,8 +10,8 @@ for char in sentence:
             print(False)
             break
         char_set.add(char)
-else:
-    print(True)
+    else:
+        print(True)
 
 
 OUTPUT:
