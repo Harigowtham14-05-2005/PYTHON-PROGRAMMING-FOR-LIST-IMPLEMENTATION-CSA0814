@@ -1,0 +1,11 @@
+CODES:
+s1 = "abcd"
+s2 = "wxyz"
+new_string = ""
+for i in range(min(len(s1), len(s2))):
+    new_string += s1[i] + s2[i]
+print(new_string)
+
+
+OUTPUT:
+awbxcydz
