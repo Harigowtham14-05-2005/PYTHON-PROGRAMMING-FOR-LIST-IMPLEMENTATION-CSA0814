@@ -1,0 +1,91 @@
+TITLE:   
+XML Parser
+
+
+PROBLEM STATEMENT:
+Create a Python program that parses XML data from a file using the xml.etree.ElementTree module, extracts relevant information, and presents it in a human-readable format or performs specific actions based on the data.
+
+
+CODES:
+#XML File ('library_data.xml.txt')
+<library>
+    <books>
+        <book id="1">
+            <title>Python Programming</title>
+            <author>John Doe</author>
+            <publisher>
+                <name>TechBooks Publishing</name>
+                <year>2020</year>
+            </publisher>
+            <price>29.99</price>
+        </book>
+        <book id="2">
+            <title>Advanced Algorithms</title>
+            <author>Jane Smith</author>
+            <publisher>
+                <name>DataSci Publishers</name>
+                <year>2018</year>
+            </publisher>
+            <price>35.50</price>
+        </book>
+        <book id="3">
+            <title>Machine Learning Insights</title>
+            <author>Emily Johnson</author>
+            <publisher>
+                <name>AI Research House</name>
+                <year>2022</year>
+            </publisher>
+            <price>45.00</price>
+        </book>
+    </books>
+    <authors>
+        <author id="1">
+            <name>John Doe</name>
+            <nationality>American</nationality>
+            <birthyear>1980</birthyear>
+        </author>
+        <author id="2">
+            <name>Jane Smith</name>
+            <nationality>British</nationality>
+            <birthyear>1975</birthyear>
+        </author>
+        <author id="3">
+            <name>Emily Johnson</name>
+            <nationality>Canadian</nationality>
+            <birthyear>1990</birthyear>
+        </author>
+    </authors>
+</library>
+#Python Program ('xml_parser.py')
+xmlfile = "library_data.xml.txt"
+import xml.etree.ElementTree as ET
+def parse_xml(xmlfile):
+    tree = ET.parse(xmlfile)
+    root = tree.getroot()
+    print("Books in the library:")
+    for book in root.find('books').findall('book'):
+        title = book.find('title').text
+        author = book.find('author').text
+        publisher = book.find('publisher').find('name').text
+        year = book.find('publisher').find('year').text
+        price = book.find('price').text
+        print(f'Title: {title}, Author: {author}, Publisher: {publisher}, Year: {year}, Price: {price}')
+    print("\nAuthor Information:")
+    for author in root.find('authors').findall('author'):
+        name = author.find('name').text
+        nationality = author.find('nationality').text
+        birthyear = author.find('birthyear').text
+        print(f'Name: {name}, Nationality: {nationality}, Birth Year: {birthyear}')
+parse_xml('library_data.xml.txt')
+
+
+OUTPUT:
+Books in the library:
+Title: Python Programming, Author: John Doe, Publisher: TechBooks Publishing, Year: 2020, Price: 29.99
+Title: Advanced Algorithms, Author: Jane Smith, Publisher: DataSci Publishers, Year: 2018, Price: 35.50
+Title: Machine Learning Insights, Author: Emily Johnson, Publisher: AI Research House, Year: 2022, Price: 45.00
+
+Author Information:
+Name: John Doe, Nationality: American, Birth Year: 1980
+Name: Jane Smith, Nationality: British, Birth Year: 1975
+Name: Emily Johnson, Nationality: Canadian, Birth Year: 1990
