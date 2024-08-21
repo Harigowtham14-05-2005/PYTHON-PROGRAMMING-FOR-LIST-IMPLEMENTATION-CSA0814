@@ -11,5 +11,5 @@ print("Repeated element:",repeated)
 
 
 OUTPUT:
-2,1,3,4,2
+Enter array elements: 2,1,3,4,2
 Repeated element:2
