@@ -1,12 +1,10 @@
 CODES:
-from math import comb
-n = int(input("Enter the number of steps: "))
-total_ways = 0
-for k in range(n // 2 + 1):
-    total_ways += comb(n - k, k)
-print("Number of distinct ways to climb to the top:",total_ways)
+n=5
+a,b=1,1
+for i in range(2,n+1):
+  a,b=b,a+b
+print("Number of distinct ways to climb to the top:",b)
 
 
 OUTPUT:
-Enter the number of steps:3
-Number of distinct ways to climb to the top:3
+Number of distinct ways to climb to the top:8
