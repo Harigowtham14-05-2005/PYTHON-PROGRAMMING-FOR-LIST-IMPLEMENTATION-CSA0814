@@ -6,4 +6,4 @@ print("Result:",result)
 
 OUTPUT:
 2+3*4-5
-result=9
+Result=9
