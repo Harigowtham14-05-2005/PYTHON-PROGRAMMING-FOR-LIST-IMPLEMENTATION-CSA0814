@@ -36,5 +36,5 @@ print(f"Maximum profit: {dp[n][capacity]}")
 OUTPUT:
 Items included for maximum profit:
 Weight: 4, Value: 7
-Weight: 1, Value: 1
-Maximum profit: 8
+Weight: 1, Value: 2
+Maximum profit: 9
