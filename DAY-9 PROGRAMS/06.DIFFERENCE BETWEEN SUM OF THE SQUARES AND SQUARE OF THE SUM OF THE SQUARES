@@ -1,0 +1,14 @@
+CODES:
+n = 200
+sum_of_squares = sum(i**2 for i in range(1, n + 1))
+square_of_sum = sum_of_squares ** 2
+difference = square_of_sum - sum_of_squares
+print("Sum of the squares:", sum_of_squares)
+print("Square of the sum:", square_of_sum)
+print("Difference:", difference)
+
+
+OUTPUT:
+Sum of the squares: 2686700
+Square of the sum: 7218356890000
+Difference: 7218354203300
