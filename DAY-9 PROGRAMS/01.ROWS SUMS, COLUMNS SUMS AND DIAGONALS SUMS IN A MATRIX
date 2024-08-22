@@ -1,0 +1,35 @@
+CODES:
+import numpy as np
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+matrix = np.array(matrix)
+row_sums = np.sum(matrix, axis=1)
+column_sums = np.sum(matrix, axis=0)
+diagonal_sum1 = np.trace(matrix)
+diagonal_sum2 = np.trace(np.fliplr(matrix))
+print("Matrix:")
+print(matrix)
+print("\nRow Sums:")
+print(row_sums)
+print("\nColumn Sums:")
+print(column_sums)
+print("\nDiagonal Sums:")
+print("Main Diagonal:",diagonal_sum1)
+print(f"Anti-Diagonal:',diagonal_sum2)
+
+
+OUTPUT:
+Matrix:
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Row Sums:
+[ 6 15 24]
+Column Sums:
+[12 15 18]
+Diagonal Sums:
+Main Diagonal: 15
+Anti-Diagonal: 15
