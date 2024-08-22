@@ -1,0 +1,41 @@
+CODES:
+sentence = "Hello world this is a test"
+width = 30
+print("\nLeft Justified:")
+print(sentence.ljust(width))
+print("\nCenter Justified:")
+print(sentence.center(width))
+print("\nRight Justified:")
+print(sentence.rjust(width))
+print("\nFull Justified:")
+words = sentence.split()
+if len(words) == 1:
+    print(words[0].ljust(width))
+else:
+    total_spaces = width - sum(len(word) for word in words)
+    spaces_between_words = len(words) - 1    
+    if spaces_between_words > 0:
+        space = total_spaces // spaces_between_words
+        extra_space = total_spaces % spaces_between_words
+        justified_text = ""
+        for i in range(spaces_between_words):
+            justified_text += words[i]
+            justified_text += ' ' * (space + (1 if i < extra_space else 0))
+        justified_text += words[-1]
+        print(justified_text)
+    else:
+        print(words[0].ljust(width))
+
+
+OUTPUT:
+Left Justified:
+Hello world this is a test       
+
+Center Justified:
+   Hello world this is a test   
+
+Right Justified:
+        Hello world this is a test
+
+Full Justified:
+Hello   world   this   is   a   test
