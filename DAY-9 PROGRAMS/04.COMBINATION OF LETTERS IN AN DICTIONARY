@@ -1,0 +1,22 @@
+CODES:
+from itertools import product
+letter_dict = {
+    'key1': ['A', 'B'],
+    'key2': ['1', '2'],
+    'key3': ['X', 'Y']
+}
+letter_lists = letter_dict.values()
+combinations = list(product(*letter_lists))
+for combo in combinations:
+    print(''.join(combo))
+
+
+OUTPUT:
+A1X
+A1Y
+A2X
+A2Y
+B1X
+B1Y
+B2X
+B2Y
