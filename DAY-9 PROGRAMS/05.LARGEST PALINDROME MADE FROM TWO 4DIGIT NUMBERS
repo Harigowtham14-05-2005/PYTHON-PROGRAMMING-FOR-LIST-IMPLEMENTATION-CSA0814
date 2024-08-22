@@ -1,0 +1,20 @@
+CODES:
+num1 = int(input("Enter the first 4-digit number: "))
+num2 = int(input("Enter the second 4-digit number: "))
+if 1000 <= num1 <= 9999 and 1000 <= num2 <= 9999:
+    max_palindrome = 0
+    for i in range(num1, num2 + 1):
+        for j in range(i, num2 + 1):
+            product = i * j
+            # Check if the product is a palindrome
+            if str(product) == str(product)[::-1] and product > max_palindrome:
+                max_palindrome = product
+    print("Largest Palindrome Product:", max_palindrome)
+else:
+    print("Both numbers must be 4-digit numbers.")
+
+
+OUTPUT:
+Enter the first 4-digit number: 4695
+Enter the second 4-digit number: 8956
+Largest Palindrome Product:76777767
