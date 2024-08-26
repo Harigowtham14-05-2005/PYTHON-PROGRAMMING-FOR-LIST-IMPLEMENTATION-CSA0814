@@ -1,0 +1,12 @@
+CODES:
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+odd_numbers = filter(lambda x: x % 2 != 0, lst)
+even_numbers = filter(lambda x: x % 2 == 0, lst)
+squared_odds = [x ** 2 for x in odd_numbers]
+print("Even numbers:", list(even_numbers))
+print("Squared odd numbers:", squared_odds)
+
+
+OUTPUT:
+Even numbers: [2, 4, 6, 8, 10]
+Squared odd numbers: [1, 9, 25, 49, 81]
