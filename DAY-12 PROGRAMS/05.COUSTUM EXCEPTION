@@ -1,0 +1,16 @@
+CODES:
+def raises(exception_class, message):
+    raise exception_class(message)
+def check_age(age):
+    if age < 18 or age > 100:
+        raises(ValueError, f"Invalid age: {age}. Age must be between 18 and 100.")
+    print("Valid age.")
+try:
+    age = 120  
+    check_age(age)
+except ValueError as e:
+    print(e)
+
+
+OUTPUT:
+Invalid age: 120. Age must be between 18 and 100.
