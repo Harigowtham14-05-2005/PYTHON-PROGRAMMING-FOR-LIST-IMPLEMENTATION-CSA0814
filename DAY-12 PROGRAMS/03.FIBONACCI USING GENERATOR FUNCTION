@@ -1,0 +1,25 @@
+CODES:
+def generator():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+def fibonacci(n):
+    fib_gen = generator()
+    for _ in range(n):
+        print(next(fib_gen))
+n = 10
+fibonacci(n)
+
+
+OUTPUT:
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
