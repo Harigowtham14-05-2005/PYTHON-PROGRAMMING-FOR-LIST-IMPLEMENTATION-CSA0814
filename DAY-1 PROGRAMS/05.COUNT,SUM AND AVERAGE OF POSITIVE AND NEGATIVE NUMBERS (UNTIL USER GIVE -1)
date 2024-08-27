@@ -3,7 +3,7 @@ positive_count = 0
 negative_count = 0
 positive_sum = 0
 negative_sum = 0
-num=int(input("Enter numbers (enter -1 to stop):")
+num=int(input("Enter numbers (enter -1 to stop):"))
 while num != -1:
     if num > 0:
         positive_count += 1
