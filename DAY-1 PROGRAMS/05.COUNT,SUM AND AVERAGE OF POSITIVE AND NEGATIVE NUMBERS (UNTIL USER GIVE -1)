@@ -11,7 +11,7 @@ while num != -1:
     elif num < 0:
         negative_count += 1
         negative_sum += num
-    num = int(input("Enter numbers(enter -1 to stop):")
+    num = int(input("Enter numbers(enter -1 to stop):"))
 if positive_count > 0:
     positive_avg = positive_sum / positive_count
 else:
